@@ -23,6 +23,11 @@ fn main() {
             (version: "1.0")
             (@arg INPUT: +required "Sets the input file to use")
         )
+        (@subcommand day2b =>
+            (about: "Solve for the 2nd problem of day 2")
+            (version: "1.0")
+            (@arg INPUT: +required "Sets the input file to use")
+        )
     )
     .get_matches();
     if let Some(matches) = matches.subcommand_matches("day1a") {
@@ -38,6 +43,11 @@ fn main() {
     if let Some(matches) = matches.subcommand_matches("day2a") {
         if let Some(input) = matches.value_of("INPUT") {
             day2::solve_a(input);
+        }
+    }
+    if let Some(matches) = matches.subcommand_matches("day2b") {
+        if let Some(input) = matches.value_of("INPUT") {
+            day2::solve_b(input);
         }
     }
 }
