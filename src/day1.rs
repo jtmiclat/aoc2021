@@ -1,8 +1,8 @@
 use std::fs;
 
 pub fn solve_a(filename: &str) {
-    let foo: String = fs::read_to_string(filename).expect("Error opening file");
-    let numbers: Vec<i32> = foo
+    let file: String = fs::read_to_string(filename).expect("Error opening file");
+    let numbers: Vec<i32> = file
         .split_whitespace()
         .map(|n| n.parse().expect("Error parsing number"))
         .collect();
@@ -17,8 +17,8 @@ pub fn solve_a(filename: &str) {
     }
 }
 pub fn solve_b(filename: &str) {
-    let foo: String = fs::read_to_string(filename).expect("Error opening file");
-    let numbers: Vec<i32> = foo
+    let file: String = fs::read_to_string(filename).expect("Error opening file");
+    let numbers: Vec<i32> = file
         .split_whitespace()
         .map(|n| n.parse().expect("Error parsing number"))
         .collect();

@@ -1,8 +1,8 @@
 use std::fs;
 pub fn solve_a(filename: &str) {
-    let foo: String = fs::read_to_string(filename).expect("Error opening file");
+    let file: String = fs::read_to_string(filename).expect("Error opening file");
     let mut valid_passwords: i32 = 0;
-    for line in foo.lines() {
+    for line in file.lines() {
         let line_parts: Vec<&str> = line.split_whitespace().collect();
         let range = line_parts[0];
         let character = line_parts[1].replace(":", "");
@@ -20,9 +20,9 @@ pub fn solve_a(filename: &str) {
 }
 
 pub fn solve_b(filename: &str) {
-    let foo: String = fs::read_to_string(filename).expect("Error opening file");
+    let file: String = fs::read_to_string(filename).expect("Error opening file");
     let mut valid_passwords: i32 = 0;
-    for line in foo.lines() {
+    for line in file.lines() {
         let line_parts: Vec<&str> = line.split_whitespace().collect();
         let range = line_parts[0];
         let character = line_parts[1].replace(":", "").chars().next().unwrap();
