@@ -14,6 +14,12 @@ cargo run day1b data/day1.txt
 # day2 question 1
 cargo run day2a data/day2.txt
 
-# dayw question 2
+# day2 question 2
 cargo run day2b data/day2.txt
+
+# day3 question 1
+cargo run day3a data/day3.txt
+
+# day3 question 2
+cargo run day3b data/day3.txt
 ```
