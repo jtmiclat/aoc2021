@@ -9,6 +9,8 @@ fn main() {
         (version: "1.0")
         (author: "Jt Miclat <jtmiclat@gmail.com>")
         (about: "Advent of Code 2021")
+        (@setting SubcommandRequiredElseHelp)
+        (@setting ColoredHelp)
         (@arg verbose: -v --verbose "Print test information verbosely")
         (@subcommand day1a =>
             (about: "Solve for the 1st problem of day 1")
